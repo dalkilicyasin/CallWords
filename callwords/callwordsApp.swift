@@ -11,7 +11,7 @@ import SwiftUI
 struct callwordsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: MainScreenViewModel())
         }
     }
 }
