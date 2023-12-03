@@ -28,11 +28,6 @@ import Foundation
     }
 }
 
-struct DataModel: Decodable, Equatable {
-    let word: String?
-    let explanation: String?
-}
-
 enum ErrorHandling: Error {
     case serviceFault
     case decodeFault
