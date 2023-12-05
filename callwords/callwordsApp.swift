@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct callwordsApp: App {
+    
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor.red]
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: MainScreenViewModel())
+            DetailPage(viewModel: MainScreenViewModel())
         }
     }
 }

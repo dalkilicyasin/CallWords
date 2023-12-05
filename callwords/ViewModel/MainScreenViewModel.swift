@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 class MainScreenViewModel: ObservableObject {
     @Published var randomWords: [DataModel] = []
    
@@ -30,3 +31,6 @@ class MainScreenViewModel: ObservableObject {
         }
     }
 }
+
+
+

@@ -10,10 +10,14 @@ import SwiftUI
 struct CardView: View {
     let image: Image?
     let title: String?
+    let buttonAction: ButtonAction
+    
     init(image: Image? = nil,
-         title: String? = nil) {
+         title: String? = nil,
+         buttonAction: ButtonAction = nil) {
         self.image = image
         self.title = title
+        self.buttonAction = buttonAction
     }
     
     var body: some View {
@@ -35,6 +39,11 @@ struct CardView: View {
         }.padding(20)
             .background(.black.gradient)
             .cornerRadius(20)
+            .onTapGesture {
+                if let buttonAction {
+                    buttonAction()
+                }
+            }
             
     }
 }

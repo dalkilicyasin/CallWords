@@ -7,35 +7,37 @@
 
 import SwiftUI
 
-typealias ButtonAction = () -> ()
+public typealias ButtonAction = (() -> ())?
 
 struct TopBarView: View {
     let buttonTitles: [String]
-    let buttonAction: ButtonAction?
+    let buttonAction: ButtonAction
+   @State private var selectedButtonIndex = 0
     
-    init(buttonTitles: [String], buttonAction: ButtonAction? = nil) {
+    init(buttonTitles: [String], buttonAction: ButtonAction = nil) {
         self.buttonTitles = buttonTitles
         self.buttonAction = buttonAction
     }
     
     var body: some View {
-        HStack{
-            Button(action: {
-                if let buttonAction {
-                    buttonAction()
-                }
-            }, label: {
-                ForEach(buttonTitles, id: \.self){ index in
-                    Text("\(index)")
+        HStack(alignment: .center, spacing: .zero ){
+            ForEach(0..<buttonTitles.count, id: \.self){ index in
+                Button(action: {
+                    if let buttonAction {
+                        buttonAction()
+                    }
+                    selectedButtonIndex = index
+                }, label: {
+                    Text("\(buttonTitles[index])")
                         .padding(10)
-                        .background(.black)
-                        .font(.title)
-                }
-            })
+                        .background(selectedButtonIndex == index ? .green : .black)
+                        .font(.headline)
+                })
+            }
         }.cornerRadius(20)
     }
 }
 
 #Preview {
-    TopBarView(buttonTitles: ["first","second","third","third"])
+    TopBarView(buttonTitles: ["English","Spanish","Russian","Turkish"])
 }

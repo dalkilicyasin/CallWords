@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-struct ContentView: View {
+struct DetailPage: View {
  
     @ObservedObject var viewModel: MainScreenViewModel
     
@@ -39,7 +39,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(viewModel: MainScreenViewModel())
+    DetailPage(viewModel: MainScreenViewModel())
 }
 
 
