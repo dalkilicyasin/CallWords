@@ -26,7 +26,7 @@ struct MainPageScreenView: View {
                         CardView(image: Image("\(viewModel.languages[index].image ?? "")"), title: "\(viewModel.languages[index].title ?? "")", buttonAction: {
                             self.goToOtherView.toggle()
                         })
-                        .frame(width: 300, height: 500)
+                        .frame(width: 300, height: 300)
                         .opacity(currentIndex == index ? 1.0 : 0.5)
                         .scaleEffect(currentIndex == index ? 1.2 : 0.8)
                         .offset(x: CGFloat(index - currentIndex) * 300 + dragOffset, y: 0)
@@ -53,7 +53,6 @@ struct MainPageScreenView: View {
                         })
                 )
             }
-            .padding(20)
             .onAppear{
                 viewModel.getLanguages()
             }

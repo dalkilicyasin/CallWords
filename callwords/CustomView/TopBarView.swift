@@ -31,10 +31,10 @@ struct TopBarView: View {
                     Text("\(buttonTitles[index])")
                         .padding(10)
                         .background(selectedButtonIndex == index ? .green : .black)
-                        .font(.headline)
+                        .font(.init(.caption)?.bold())
                 })
             }
-        }.cornerRadius(20)
+        }.cornerRadius(10)
     }
 }
 

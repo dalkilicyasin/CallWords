@@ -15,12 +15,14 @@ class MainPageScreenViewModel: ObservableObject {
     
     
     func getLanguages(){
-        let english = LanguageModel(image: "eng", title: "İngilizce")
-        let spanish = LanguageModel(image: "esp", title: "İspanyolca")
-        let russian = LanguageModel(image: "rus", title: "Rusça")
+        let english = LanguageModel(image: "eng", title: "English")
+        let spanish = LanguageModel(image: "esp", title: "Española")
+        let russian = LanguageModel(image: "rus", title: "Россия")
+        let turkish = LanguageModel(image: "tr", title: "Türkçe")
         
         self.languages.append(english)
         self.languages.append(spanish)
         self.languages.append(russian)
+        self.languages.append(turkish)
     }
 }
