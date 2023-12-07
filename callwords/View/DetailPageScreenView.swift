@@ -8,11 +8,11 @@
 import SwiftUI
 import Foundation
 
-struct DetailPage: View {
+struct DetailPageScreenView: View {
  
-    @ObservedObject var viewModel: MainScreenViewModel
+    @ObservedObject var viewModel: DetailPageScreenViewModel
     
-    init(viewModel: MainScreenViewModel) {
+    init(viewModel: DetailPageScreenViewModel) {
         self.viewModel = viewModel
     }
     
@@ -39,7 +39,7 @@ struct DetailPage: View {
 }
 
 #Preview {
-    DetailPage(viewModel: MainScreenViewModel())
+    DetailPageScreenView(viewModel: DetailPageScreenViewModel())
 }
 
 

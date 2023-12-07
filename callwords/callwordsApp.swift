@@ -16,7 +16,7 @@ struct callwordsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            DetailPage(viewModel: MainScreenViewModel())
+           MainPageScreenView(viewModel: MainPageScreenViewModel())
         }
     }
 }

@@ -8,9 +8,8 @@
 import Foundation
 
 
-class MainScreenViewModel: ObservableObject {
+class DetailPageScreenViewModel: ObservableObject {
     @Published var randomWords: [DataModel] = []
-   
     @Published var chosenWord = ""
     @Published var chosenExplanation = ""
     

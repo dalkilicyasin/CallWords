@@ -32,7 +32,7 @@ struct MainPageScreenView: View {
                         .offset(x: CGFloat(index - currentIndex) * 300 + dragOffset, y: 0)
                     }
                     NavigationLink(
-                        destination: DetailPage(viewModel: MainScreenViewModel()),
+                        destination: DetailPageScreenView(viewModel: DetailPageScreenViewModel()),
                         isActive: self.$goToOtherView,
                         label: {
                             EmptyView()
