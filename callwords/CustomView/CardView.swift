@@ -12,14 +12,17 @@ struct CardView: View {
     let title: String?
     let firstTitle: String?
     let buttonAction: ButtonAction
+    @Binding var currentTitle: String
     
     init(image: Image? = nil,
          title: String? = nil,
          firstTitle: String? = nil,
+         currentTitle: Binding<String>,
          buttonAction: ButtonAction = nil) {
         self.image = image
         self.title = title
         self.firstTitle = firstTitle
+        self._currentTitle = currentTitle
         self.buttonAction = buttonAction
     }
     
@@ -32,8 +35,9 @@ struct CardView: View {
                         .foregroundStyle(.white)
                 }
                 
-                TopBarView(buttonTitles: ["English","Española","Россия","Türkçe"])
-                    .frame(minWidth: 0, maxWidth: .infinity)
+                TopBarView(buttonTitles: ["English","Española","Россия","Türkçe"], buttonAction: {
+                    //print("\(currentTitle)")
+                }, selectedTitle: $currentTitle).frame(minWidth: 0, maxWidth: .infinity)
                 
                 if let image {
                     image
@@ -55,5 +59,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(image: Image("eng"), title: "English")
+    CardView(image: Image("eng"), title: "English", currentTitle: .constant(""))
 }

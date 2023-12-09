@@ -13,7 +13,7 @@ struct MainPageScreenView: View {
     @State private var currentIndex: Int = 0
     @GestureState private var  dragOffset: CGFloat = 0
     @ObservedObject var viewModel: MainPageScreenViewModel
-    
+
     init(viewModel: MainPageScreenViewModel) {
         self.viewModel = viewModel
     }
@@ -23,7 +23,8 @@ struct MainPageScreenView: View {
             VStack{
                 ZStack() {
                     ForEach(0..<viewModel.languages.count, id: \.self){ index in
-                        CardView(image: Image("\(viewModel.languages[index].image ?? "")"), title: "\(viewModel.languages[index].title ?? "")", buttonAction: {
+                        CardView(image: Image("\(viewModel.languages[index].image ?? "")"), title: "\(viewModel.languages[index].title ?? "")", currentTitle: $viewModel.explanation, buttonAction: {
+                            viewModel.word = viewModel.languages[index].title ?? ""
                             self.goToOtherView.toggle()
                         })
                         .frame(width: 300, height: 300)
@@ -31,8 +32,9 @@ struct MainPageScreenView: View {
                         .scaleEffect(currentIndex == index ? 1.2 : 0.8)
                         .offset(x: CGFloat(index - currentIndex) * 300 + dragOffset, y: 0)
                     }
+                    
                     NavigationLink(
-                        destination: DetailPageScreenView(viewModel: DetailPageScreenViewModel()),
+                        destination: DetailPageScreenView(viewModel: DetailPageScreenViewModel(chosenWord: viewModel.word , chosenExplanation: viewModel.explanation)),
                         isActive: self.$goToOtherView,
                         label: {
                             EmptyView()

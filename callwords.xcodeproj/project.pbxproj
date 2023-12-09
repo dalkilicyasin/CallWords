@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D953EBE22B23C9370031411C /* spanish-spanish.json in Resources */ = {isa = PBXBuildFile; fileRef = D953EBE12B23C9370031411C /* spanish-spanish.json */; };
+		D953EBE82B23CA490031411C /* spanish-english.json in Resources */ = {isa = PBXBuildFile; fileRef = D953EBE72B23CA490031411C /* spanish-english.json */; };
+		D953EBEA2B23CB6D0031411C /* spanish-turkish.json in Resources */ = {isa = PBXBuildFile; fileRef = D953EBE92B23CB6D0031411C /* spanish-turkish.json */; };
 		D9593FB02B16735000EE67F7 /* callwordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9593FAF2B16735000EE67F7 /* callwordsApp.swift */; };
 		D9593FB22B16735000EE67F7 /* DetailPageScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9593FB12B16735000EE67F7 /* DetailPageScreenView.swift */; };
 		D9593FB42B16735300EE67F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9593FB32B16735300EE67F7 /* Assets.xcassets */; };
@@ -45,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D953EBE12B23C9370031411C /* spanish-spanish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "spanish-spanish.json"; path = "../../../../Downloads/spanish-spanish.json"; sourceTree = "<group>"; };
+		D953EBE62B23C9700031411C /* english-english.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "english-english.json"; sourceTree = "<group>"; };
+		D953EBE72B23CA490031411C /* spanish-english.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "spanish-english.json"; path = "../../../../Downloads/spanish-english.json"; sourceTree = "<group>"; };
+		D953EBE92B23CB6D0031411C /* spanish-turkish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "spanish-turkish.json"; path = "../../../../Downloads/spanish-turkish.json"; sourceTree = "<group>"; };
 		D9593FAC2B16735000EE67F7 /* callwords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = callwords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9593FAF2B16735000EE67F7 /* callwordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = callwordsApp.swift; sourceTree = "<group>"; };
 		D9593FB12B16735000EE67F7 /* DetailPageScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageScreenView.swift; sourceTree = "<group>"; };
@@ -94,9 +101,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D953EBDF2B23C9180031411C /* LanguageJSONFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D953EBE52B23C9610031411C /* Russian */,
+				D953EBE42B23C9530031411C /* Turkish */,
+				D953EBE32B23C9440031411C /* English */,
+				D953EBE02B23C9270031411C /* Spanish */,
+			);
+			path = LanguageJSONFiles;
+			sourceTree = "<group>";
+		};
+		D953EBE02B23C9270031411C /* Spanish */ = {
+			isa = PBXGroup;
+			children = (
+				D953EBE12B23C9370031411C /* spanish-spanish.json */,
+				D953EBE72B23CA490031411C /* spanish-english.json */,
+				D953EBE92B23CB6D0031411C /* spanish-turkish.json */,
+			);
+			path = Spanish;
+			sourceTree = "<group>";
+		};
+		D953EBE32B23C9440031411C /* English */ = {
+			isa = PBXGroup;
+			children = (
+				D953EBE62B23C9700031411C /* english-english.json */,
+			);
+			path = English;
+			sourceTree = "<group>";
+		};
+		D953EBE42B23C9530031411C /* Turkish */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Turkish;
+			sourceTree = "<group>";
+		};
+		D953EBE52B23C9610031411C /* Russian */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Russian;
+			sourceTree = "<group>";
+		};
 		D9593FA32B16735000EE67F7 = {
 			isa = PBXGroup;
 			children = (
+				D953EBDF2B23C9180031411C /* LanguageJSONFiles */,
 				D9F683862B20D43500EFE56C /* Launch Screen.storyboard */,
 				D9593FAE2B16735000EE67F7 /* callwords */,
 				D9593FBF2B16735300EE67F7 /* callwordsTests */,
@@ -321,8 +372,11 @@
 			files = (
 				D9593FB72B16735300EE67F7 /* Preview Assets.xcassets in Resources */,
 				D9593FB42B16735300EE67F7 /* Assets.xcassets in Resources */,
+				D953EBE22B23C9370031411C /* spanish-spanish.json in Resources */,
 				D9F683872B20D43500EFE56C /* Launch Screen.storyboard in Resources */,
+				D953EBEA2B23CB6D0031411C /* spanish-turkish.json in Resources */,
 				D9593FE02B16823300EE67F7 /* generated.json in Resources */,
+				D953EBE82B23CA490031411C /* spanish-english.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

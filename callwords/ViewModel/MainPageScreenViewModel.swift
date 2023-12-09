@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 
 class MainPageScreenViewModel: ObservableObject {
-    @Published private(set) var languages: [LanguageModel] = []
-    @Published private(set) var title = "Language"
+    @Published  var languages: [LanguageModel] = []
+    @Published  var explanation = "English"
+    @Published  var word = "English"
     
     func getLanguages(){
         self.languages = []

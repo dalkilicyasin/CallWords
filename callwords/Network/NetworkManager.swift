@@ -11,10 +11,9 @@ import Foundation
     
      static  let shared = NetworkManager()
     
-     func callWords(complation: @escaping (Result<[DataModel],ErrorHandling>) -> Void) {
+     func callWords(chosenWord: String, chosenExplanation: String, complation: @escaping (Result<[DataModel],ErrorHandling>) -> Void) {
         
-         guard let fileLocation = Bundle.main.url(forResource: "generated", withExtension: "json") else {return}
-        
+         guard let fileLocation = Bundle.main.url(forResource: "\(chosenWord)-\(chosenExplanation)", withExtension: "json") else {return}
         
         do {
             let data = try? Data(contentsOf: fileLocation)
