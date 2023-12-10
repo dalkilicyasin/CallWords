@@ -23,14 +23,23 @@ struct DetailPageScreenView: View {
                 .font(
                     .custom("Helvetica", size: 60)
                         .weight(.bold))
-                .foregroundStyle(Gradient(colors: [.black, .red]))
+                .foregroundStyle(Gradient(colors: [.red, .black]))
              Spacer()
-            Text("\(self.viewModel.randomWord)")
-                .padding(20)
-                .background(.cyan)
-            Text("Explanation: \(self.viewModel.chosenExplanation)")
-                .padding(20)
-                .background(.yellow)
+            VStack{
+                Text("\(self.viewModel.randomWord)")
+                    .padding(30)
+                    .font(
+                        .custom("Helvetica", size: 41)
+                            .weight(.bold))
+                    .foregroundStyle(.white)
+                Text("\(self.viewModel.randomExplanation)")
+                    .padding(20)
+                    .font(
+                        .custom("Helvetica", size: 22)
+                            .weight(.bold))
+                    .foregroundStyle(.blue)
+            }.background(Gradient(colors: [.black]))
+                .cornerRadius(20)
            Spacer()
             Button(action: {
                 self.viewModel.callWords()
@@ -41,7 +50,7 @@ struct DetailPageScreenView: View {
                         .bold())
                     .padding(20)
                     .frame(width: 350)
-                    .background(.red)
+                    .background(Gradient(colors: [.black, .red]))
                     .cornerRadius(10)
                     
             })
