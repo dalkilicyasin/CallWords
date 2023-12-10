@@ -47,7 +47,7 @@ struct CardView: View {
                         .frame(height: 200)
                 }
             }.padding(10)
-                .background(.black.gradient)
+                .background(LinearGradient(colors: [Color(UIColor.darkGray), .black], startPoint: .top, endPoint: .bottom))
                 .cornerRadius(20)
                 .onTapGesture {
                     if let buttonAction {

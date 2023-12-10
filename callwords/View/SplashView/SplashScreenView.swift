@@ -30,7 +30,7 @@ struct SplashScreenView: View {
                         }
                     }
             }.onAppear{
-                DispatchQueue.main.asyncAfterUnsafe(deadline: .now() + 2) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     withAnimation{
                         self.isActive = true
                     }

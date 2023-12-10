@@ -18,13 +18,14 @@ struct DetailPageScreenView: View {
     }
     
     var body: some View {
-        VStack(spacing: 20) {
+        VStack {
+            Spacer(minLength: 20)
             Text("\(viewModel.chosenWord)")
                 .font(
                     .custom("Helvetica", size: 60)
                         .weight(.bold))
-                .foregroundStyle(Gradient(colors: [.red, .black]))
-             Spacer()
+                .foregroundStyle(LinearGradient(colors: [Color(UIColor.darkGray), .gray], startPoint: .top, endPoint: .bottom))
+             Spacer(minLength: 50)
             VStack{
                 Text("\(self.viewModel.randomWord)")
                     .padding(30)
@@ -38,7 +39,7 @@ struct DetailPageScreenView: View {
                         .custom("Helvetica", size: 22)
                             .weight(.bold))
                     .foregroundStyle(.blue)
-            }.background(Gradient(colors: [.black]))
+            }.background(LinearGradient(colors: [.black, Color(UIColor.darkGray)], startPoint: .leading, endPoint: .trailing))
                 .cornerRadius(20)
            Spacer()
             Button(action: {
@@ -50,7 +51,7 @@ struct DetailPageScreenView: View {
                         .bold())
                     .padding(20)
                     .frame(width: 350)
-                    .background(Gradient(colors: [.black, .red]))
+                    .background(LinearGradient(colors: [Color(UIColor.black), .green], startPoint: .top, endPoint: .bottom))
                     .cornerRadius(10)
                     
             })
