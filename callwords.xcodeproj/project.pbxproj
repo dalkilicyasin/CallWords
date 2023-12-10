@@ -23,6 +23,8 @@
 		D953EC022B25F52D0031411C /* turkish-english.json in Resources */ = {isa = PBXBuildFile; fileRef = D953EBFE2B25F52C0031411C /* turkish-english.json */; };
 		D953EC032B25F52D0031411C /* turkish-russian.json in Resources */ = {isa = PBXBuildFile; fileRef = D953EBFF2B25F52D0031411C /* turkish-russian.json */; };
 		D953EC042B25F52D0031411C /* turkish-spanish.json in Resources */ = {isa = PBXBuildFile; fileRef = D953EC002B25F52D0031411C /* turkish-spanish.json */; };
+		D953EC072B25F98E0031411C /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953EC062B25F98E0031411C /* SplashScreenView.swift */; };
+		D953EC092B2609DC0031411C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D953EC082B2609DC0031411C /* LaunchScreen.storyboard */; };
 		D9593FB02B16735000EE67F7 /* callwordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9593FAF2B16735000EE67F7 /* callwordsApp.swift */; };
 		D9593FB22B16735000EE67F7 /* DetailPageScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9593FB12B16735000EE67F7 /* DetailPageScreenView.swift */; };
 		D9593FB42B16735300EE67F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9593FB32B16735300EE67F7 /* Assets.xcassets */; };
@@ -38,8 +40,6 @@
 		D9593FF02B1B614A00EE67F7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9593FEF2B1B614A00EE67F7 /* DataModel.swift */; };
 		D9593FF22B1B617900EE67F7 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9593FF12B1B617900EE67F7 /* LanguageModel.swift */; };
 		D9593FF62B1C972500EE67F7 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9593FF52B1C972500EE67F7 /* TopBarView.swift */; };
-		D9F683872B20D43500EFE56C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F683862B20D43500EFE56C /* Launch Screen.storyboard */; };
-		D9F6838E2B21FA1700EFE56C /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = D9F6838D2B21FA1700EFE56C /* SwiftSVG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +76,8 @@
 		D953EBFE2B25F52C0031411C /* turkish-english.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "turkish-english.json"; path = "../../../../Downloads/turkish-english.json"; sourceTree = "<group>"; };
 		D953EBFF2B25F52D0031411C /* turkish-russian.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "turkish-russian.json"; path = "../../../../Downloads/turkish-russian.json"; sourceTree = "<group>"; };
 		D953EC002B25F52D0031411C /* turkish-spanish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "turkish-spanish.json"; path = "../../../../Downloads/turkish-spanish.json"; sourceTree = "<group>"; };
+		D953EC062B25F98E0031411C /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		D953EC082B2609DC0031411C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9593FAC2B16735000EE67F7 /* callwords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = callwords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9593FAF2B16735000EE67F7 /* callwordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = callwordsApp.swift; sourceTree = "<group>"; };
 		D9593FB12B16735000EE67F7 /* DetailPageScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageScreenView.swift; sourceTree = "<group>"; };
@@ -94,7 +96,6 @@
 		D9593FEF2B1B614A00EE67F7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D9593FF12B1B617900EE67F7 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
 		D9593FF52B1C972500EE67F7 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
-		D9F683862B20D43500EFE56C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D9F683882B21995800EFE56C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9F6838E2B21FA1700EFE56C /* SwiftSVG in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,12 +179,20 @@
 			path = Russian;
 			sourceTree = "<group>";
 		};
+		D953EC052B25F9590031411C /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				D953EC062B25F98E0031411C /* SplashScreenView.swift */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
 		D9593FA32B16735000EE67F7 = {
 			isa = PBXGroup;
 			children = (
-				D953EBDF2B23C9180031411C /* LanguageJSONFiles */,
-				D9F683862B20D43500EFE56C /* Launch Screen.storyboard */,
+				D953EC082B2609DC0031411C /* LaunchScreen.storyboard */,
 				D9593FAE2B16735000EE67F7 /* callwords */,
+				D953EBDF2B23C9180031411C /* LanguageJSONFiles */,
 				D9593FBF2B16735300EE67F7 /* callwordsTests */,
 				D9593FC92B16735300EE67F7 /* callwordsUITests */,
 				D9593FAD2B16735000EE67F7 /* Products */,
@@ -204,6 +212,7 @@
 		D9593FAE2B16735000EE67F7 /* callwords */ = {
 			isa = PBXGroup;
 			children = (
+				D9593FB52B16735300EE67F7 /* Preview Content */,
 				D9F683882B21995800EFE56C /* Info.plist */,
 				D9593FED2B1B612C00EE67F7 /* Model */,
 				D9593FEA2B17D98700EE67F7 /* CustomView */,
@@ -212,7 +221,6 @@
 				D9593FE32B17CF2800EE67F7 /* View */,
 				D9593FAF2B16735000EE67F7 /* callwordsApp.swift */,
 				D9593FB32B16735300EE67F7 /* Assets.xcassets */,
-				D9593FB52B16735300EE67F7 /* Preview Content */,
 			);
 			path = callwords;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 		D9593FE32B17CF2800EE67F7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D953EC052B25F9590031411C /* SplashView */,
 				D9593FB12B16735000EE67F7 /* DetailPageScreenView.swift */,
 				D9593FE62B17D84800EE67F7 /* MainPageScreenView.swift */,
 			);
@@ -311,7 +320,6 @@
 			);
 			name = callwords;
 			packageProductDependencies = (
-				D9F6838D2B21FA1700EFE56C /* SwiftSVG */,
 			);
 			productName = callwords;
 			productReference = D9593FAC2B16735000EE67F7 /* callwords.app */;
@@ -386,7 +394,6 @@
 			);
 			mainGroup = D9593FA32B16735000EE67F7;
 			packageReferences = (
-				D9F6838C2B21FA1700EFE56C /* XCRemoteSwiftPackageReference "SwiftSVG" */,
 			);
 			productRefGroup = D9593FAD2B16735000EE67F7 /* Products */;
 			projectDirPath = "";
@@ -410,12 +417,12 @@
 				D953EBEF2B2463230031411C /* english-spanish.json in Resources */,
 				D9593FB42B16735300EE67F7 /* Assets.xcassets in Resources */,
 				D953EBF82B2468540031411C /* russian-spanish.json in Resources */,
+				D953EC092B2609DC0031411C /* LaunchScreen.storyboard in Resources */,
 				D953EC032B25F52D0031411C /* turkish-russian.json in Resources */,
 				D953EBF72B2468540031411C /* russian-english.json in Resources */,
 				D953EBFA2B2468540031411C /* russian-russian.json in Resources */,
 				D953EBFC2B25D1FE0031411C /* english-english.json in Resources */,
 				D953EBE22B23C9370031411C /* spanish-spanish.json in Resources */,
-				D9F683872B20D43500EFE56C /* Launch Screen.storyboard in Resources */,
 				D953EBF22B2463D00031411C /* english-turkish.json in Resources */,
 				D953EC022B25F52D0031411C /* turkish-english.json in Resources */,
 				D953EBEC2B2461980031411C /* spanish-russian.json in Resources */,
@@ -451,6 +458,7 @@
 				D9593FEC2B17D99C00EE67F7 /* CardView.swift in Sources */,
 				D9593FF22B1B617900EE67F7 /* LanguageModel.swift in Sources */,
 				D9593FDC2B16758200EE67F7 /* NetworkManager.swift in Sources */,
+				D953EC072B25F98E0031411C /* SplashScreenView.swift in Sources */,
 				D9593FDE2B16788F00EE67F7 /* DetailPageScreenViewModel.swift in Sources */,
 				D9593FE92B17D8A000EE67F7 /* MainPageScreenViewModel.swift in Sources */,
 				D9593FB22B16735000EE67F7 /* DetailPageScreenView.swift in Sources */,
@@ -626,6 +634,7 @@
 				INFOPLIST_FILE = callwords/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -655,6 +664,7 @@
 				INFOPLIST_FILE = callwords/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -786,25 +796,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D9F6838C2B21FA1700EFE56C /* XCRemoteSwiftPackageReference "SwiftSVG" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mchoe/SwiftSVG.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D9F6838D2B21FA1700EFE56C /* SwiftSVG */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D9F6838C2B21FA1700EFE56C /* XCRemoteSwiftPackageReference "SwiftSVG" */;
-			productName = SwiftSVG;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D9593FA42B16735000EE67F7 /* Project object */;
 }
