@@ -32,14 +32,17 @@ struct DetailPageScreenView: View {
                     .font(
                         .custom("Helvetica", size: 41)
                             .weight(.bold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.purple)
                 Text("\(self.viewModel.randomExplanation)")
                     .padding(20)
                     .font(
                         .custom("Helvetica", size: 22)
                             .weight(.bold))
-                    .foregroundStyle(.blue)
-            }.background(LinearGradient(colors: [.black, Color(UIColor.darkGray)], startPoint: .leading, endPoint: .trailing))
+                    .foregroundStyle(Color(UIColor.darkGray))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment:.center)
+            }.background(.white)
+                .cornerRadius(20)
+                .border(.purple)
                 .cornerRadius(20)
            Spacer()
             Button(action: {
@@ -51,7 +54,7 @@ struct DetailPageScreenView: View {
                         .bold())
                     .padding(20)
                     .frame(width: 350)
-                    .background(LinearGradient(colors: [Color(UIColor.black), .green], startPoint: .top, endPoint: .bottom))
+                    .background(Color(UIColor(red: 0.23, green: 0.75, blue: 0.62, alpha: 1)))
                     .cornerRadius(10)
                     
             })
