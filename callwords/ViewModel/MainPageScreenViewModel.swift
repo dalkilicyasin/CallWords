@@ -12,6 +12,7 @@ class MainPageScreenViewModel: ObservableObject {
     @Published  var languages: [LanguageModel] = []
     @Published  var explanation = "English"
     @Published  var word = "English"
+    @Published  var selectedIndex = 0
     
     func getLanguages(){
         self.languages = []

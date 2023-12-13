@@ -23,7 +23,7 @@ struct MainPageScreenView: View {
             VStack{
                 ZStack() {
                     ForEach(0..<viewModel.languages.count, id: \.self){ index in
-                        CardView(image: Image("\(viewModel.languages[index].image ?? "")"), title: "\(viewModel.languages[index].title ?? "")", currentTitle: $viewModel.explanation, buttonAction: {
+                        CardView(image: Image("\(viewModel.languages[index].image ?? "")"), title: "\(viewModel.languages[index].title ?? "")", currentTitle: $viewModel.explanation, currentIndex: $viewModel.selectedIndex, buttonAction: {
                             viewModel.word = viewModel.languages[index].title ?? ""
                             self.goToOtherView.toggle()
                         })

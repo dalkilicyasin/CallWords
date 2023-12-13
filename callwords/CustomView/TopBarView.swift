@@ -19,15 +19,17 @@ public enum Language: String {
 struct TopBarView: View {
     let buttonTitles: [String]
     let buttonAction: ButtonAction
-    @State private var selectedButtonIndex = 0
+    @Binding var selectedButtonIndex: Int
     @Binding var selectedTitle: String
     
     init(buttonTitles: [String], 
          buttonAction: ButtonAction = nil,
-         selectedTitle: Binding<String>) {
+         selectedTitle: Binding<String>,
+         selectedButtonIndex: Binding<Int>) {
         self.buttonTitles = buttonTitles
         self.buttonAction = buttonAction
         self._selectedTitle = selectedTitle
+        self._selectedButtonIndex = selectedButtonIndex
     }
     
     var body: some View {
@@ -52,5 +54,5 @@ struct TopBarView: View {
 }
 
 #Preview {
-    TopBarView(buttonTitles: [Language.english.rawValue,Language.spanish.rawValue,Language.russian.rawValue,Language.turkish.rawValue], selectedTitle: .constant("some"))
+    TopBarView(buttonTitles: [Language.english.rawValue,Language.spanish.rawValue,Language.russian.rawValue,Language.turkish.rawValue], selectedTitle: .constant("some"), selectedButtonIndex: .constant(0))
 }
