@@ -18,7 +18,6 @@ import Foundation
         do {
             let data = try? Data(contentsOf: fileLocation)
             let result = try JSONDecoder().decode([DataModel].self, from: data!)
-            print(result)
             complation(.success(result))
         } catch {
             print("parsing error")

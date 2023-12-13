@@ -27,9 +27,4 @@ class MainPageScreenViewModel: ObservableObject {
     }
 }
 
-public enum Language: String {
-    case english = "English"
-    case spanish = "Española"
-    case russian = "Россия"
-    case turkish = "Türkçe"
-}
+

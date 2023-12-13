@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,28 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hc-9D-xTg">
-                                <rect key="frame" x="96.666666666666686" y="376" width="200" height="100"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="callwords" translatesAutoresizingMaskIntoConstraints="NO" id="3Ce-Ih-L5y">
+                                <rect key="frame" x="0.0" y="276" width="393" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Vc1-my-Wkg"/>
-                                    <constraint firstAttribute="width" constant="200" id="fWp-68-tOW"/>
+                                    <constraint firstAttribute="height" constant="300" id="5h0-fT-PC1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <nil key="textColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn offline random English, Spanish, Russian and Turkish words." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAe-WT-73a">
+                                <rect key="frame" x="20" y="127" width="353" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ZMY-A4-i8B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8hc-9D-xTg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="aXL-BX-Zvi"/>
-                            <constraint firstItem="8hc-9D-xTg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="iy0-d9-a9W"/>
+                            <constraint firstItem="3Ce-Ih-L5y" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="RJR-Ud-uBa"/>
+                            <constraint firstItem="3Ce-Ih-L5y" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="U7A-LH-7cV"/>
+                            <constraint firstItem="WAe-WT-73a" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" id="aFF-xT-XAU"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="WAe-WT-73a" secondAttribute="trailing" constant="20" id="cvy-p0-3Hz"/>
+                            <constraint firstAttribute="trailing" secondItem="3Ce-Ih-L5y" secondAttribute="trailing" id="hOE-1Y-k14"/>
+                            <constraint firstItem="WAe-WT-73a" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="68" id="ooj-g3-aTa"/>
+                            <constraint firstItem="3Ce-Ih-L5y" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="pQQ-Dt-1Hr"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="callwords" width="505" height="500"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

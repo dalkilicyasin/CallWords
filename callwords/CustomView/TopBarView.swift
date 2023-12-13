@@ -9,6 +9,13 @@ import SwiftUI
 
 public typealias ButtonAction = (() -> ())?
 
+public enum Language: String {
+    case english = "English"
+    case spanish = "Española"
+    case russian = "Россия"
+    case turkish = "Türkçe"
+}
+
 struct TopBarView: View {
     let buttonTitles: [String]
     let buttonAction: ButtonAction
@@ -37,6 +44,7 @@ struct TopBarView: View {
                         .padding(10)
                         .background(selectedButtonIndex == index ? .green : .black)
                         .font(.init(.caption)?.bold())
+                        .foregroundColor(.white)
                 })
             }
         }.cornerRadius(10)
@@ -44,5 +52,5 @@ struct TopBarView: View {
 }
 
 #Preview {
-    TopBarView(buttonTitles: ["English","Spanish","Russian","Turkish"], selectedTitle: .constant("some"))
+    TopBarView(buttonTitles: [Language.english.rawValue,Language.spanish.rawValue,Language.russian.rawValue,Language.turkish.rawValue], selectedTitle: .constant("some"))
 }

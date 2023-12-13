@@ -42,8 +42,10 @@ struct DetailPageScreenView: View {
                     .frame(minWidth: 0, maxWidth: .infinity, alignment:.center)
             }.background(.white)
                 .cornerRadius(20)
-                .border(.purple)
-                .cornerRadius(20)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color(UIColor.lightGray), lineWidth: 2)
+                    )
            Spacer()
             Button(action: {
                 self.viewModel.callWords()
