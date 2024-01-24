@@ -12,6 +12,12 @@ struct callwordsApp: App {
     
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor.red]
+        
+#if DEBUG
+    print("Debug")
+#else
+    print("Release")
+#endif
     }
     
     var body: some Scene {
